@@ -1,0 +1,58 @@
+/* Show it is fixed to the top */
+
+
+/* theme color style by @fallckor */
+:root {
+  /* header-main-footer colors */
+  --main-nav-color:#000000cb;
+  --footer-color-bg:#000000cb;
+
+  /* text color */
+
+  --text-color-h1:black;
+  --text-color-h2:rgb(41, 39, 39);
+
+
+}
+
+body {
+  min-height: 75rem;
+  padding-top: 3.5rem;
+  
+}
+.bg-fallckor{
+  background-color:  var(--main-nav-color)
+}
+
+h2 {
+  scroll-margin-top: 3.5rem; /* whatever is a nice number that gets you past the header */
+}
+
+footer {
+  min-height: 20rem;
+  background-color: var(--footer-color-bg);
+}
+.imagen-svg-footer {
+  min-height: 10rem;
+
+  background-image: url("../img/f2.svg");
+  background-position: bottom;
+
+}
+
+
+/* Responsive */
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
