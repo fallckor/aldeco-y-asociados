@@ -1,36 +1,51 @@
-/* Show it is fixed to the top */
+/*  INDICE
+1.- Gobal settings
+   a)navbar
+   b)main
+   c)footer
+2.- Responsive breakpoint Bootstrap 5.0
+ */
 
-/* theme color style by @fallckor */
+
+ /* ############### 1.- Gobal settings ############## */
 :root {
   /* header-main-footer colors */
   --main-nav-color: #000000cb;
   --footer-color-bg: #000000cb;
 
   /* text color */
-
   --text-color-h1: black;
   --text-color-h2: rgb(41, 39, 39);
+
+  /* responsive */
+  /* max-width: 575.98px */
+  --img-size-car-xs:300px;
+  /* min-width: 576px */    
+  --img-size-car-sm:350px;
+  /* min-width: 768px */    
+  --img-size-car-md:400px;
+  /* min-width: 992px */
+  --img-size-car-lg:450px;
+  /* min-width: 1200px */
+  --img-size-car-xl:500px;
+  /* min-width: 1400px */
+  --img-size-car-xxl:550px;  
 }
 
 body {
-  min-height: 75rem;
-  padding-top: 3.5rem;
+  min-height: 75rem;  padding-top: 3.5rem;
 }
 
-/* navbar */
-
+/* ########  navbar  ######### */
 .bg-fallckor {
   background-color: var(--main-nav-color);
 }
-/* .navbar-dark .navbar-toggler-icon{
-  background: url( );
-} */
-/* main */
-
 h2 {
-  scroll-margin-top: 4rem; /* whatever is a nice number that gets you past the header */
+  scroll-margin-top: 4rem; 
 }
 
+/* ########  main  ######### */
+/* map leaflet  */
 #mapid { 
   width: 100%;
   height: 100%  
@@ -41,9 +56,7 @@ h2 {
 .leaflet-popup-content-wrapper{
   padding: 0 !important;
 }
-.map-size{
-  height: 500px;
-}
+
 .map-title{
   font-size: 1.5rem;
 }
@@ -51,70 +64,265 @@ h2 {
   font-size: 1.3rem;
   color: white !important;
 }
-/* footer */
-footer {
-  min-height: 4rem;
-  background-color: var(--footer-color-bg);
-  
-}
 
-.carousel-inner{
-  height: 400px;
-}
-img{
-  height: 400px;
-  object-fit: cover;
-  object-position: 0% 50%;
-}
-.imgfirst{
-  height: 400px;
-  object-position: center top;
-  object-position: 0% 42%;
-}
-.imgsecond{
-  height: 400px;
-  object-fit: cover;
-  object-position: 0% 18%;
-}
-
-.imagen-svg-footer {
-  min-height: 3rem;
-
-  background-image: url("../img/f2.svg");
-  background-position: center;
-}
 
 .direccion{
   min-height: 400px;
 }
-
-
 a, a:hover{
   text-decoration: none !important;  
 
 }
 
-/* Responsive */
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+/* ########  footer  ######### */
+footer {
+  min-height: 4rem;
+  background-color: var(--footer-color-bg);  
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
+/* Responsive breakpoint Bootstrap 5.0 */
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {  
+  /* carousel */
+
+  .carousel-inner{
+    height: var(--img-size-car);
+    -webkit-text-stroke: 0.5px rgb(124, 124, 124);
+  color: transparent;
+  }
+  .carousel-caption{
+    background-color: rgba(39, 31, 31, 0.671);
+  }
+  img{
+    height: var(--img-size-car-xs);
+    object-fit: cover;
+    object-position: 0% 50%;    
+  }
+  .imgfirst{
+    height: var(--img-size-car-xs);
+    object-position: center top;
+    object-position: 0% 42%;
+  }
+  .imgsecond{
+    height: var(--img-size-car-xs);
+    object-fit: cover;
+    object-position: 0% 18%;
   }
   
-}
+  /* mapa */
 
-@media (max-width:800px){
-  body{
-    /* display: none; */
-    
+  .map-size{
+    height: 300px;
   }
-
+  /* cards */
+.card{
+  margin-top: 1em;
 }
+
+ }
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+/* carousel */
+
+.carousel-inner{
+  height: var(--img-size-car-sm);
+  -webkit-text-stroke: 0.5px rgb(124, 124, 124);
+color: transparent;
+}
+.carousel-caption{
+  background-color: rgba(39, 31, 31, 0.671);
+}
+img{
+  height: var(--img-size-car-sm);
+  object-fit: cover;
+  object-position: 0% 50%;
+  
+}
+.imgfirst{
+  height: var(--img-size-car-sm);
+  object-position: center top;
+  object-position: 0% 42%;
+}
+.imgsecond{
+  height: var(--img-size-car-sm);
+  object-fit: cover;
+  object-position: 0% 18%;
+}
+
+/* mapa */
+
+.map-size{
+  height: 350px;
+}
+
+/* cards */
+.card{
+  margin-top: 1em;
+}
+  
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+/* carousel */
+
+.carousel-inner{
+  height: var(--img-size-car-md);
+  -webkit-text-stroke: 0.5px rgb(124, 124, 124);
+color: transparent;
+}
+.carousel-caption{
+  background-color: rgba(39, 31, 31, 0.671);
+}
+img{
+  height: var(--img-size-car-md);
+  object-fit: cover;
+  object-position: 0% 50%;
+  
+}
+.imgfirst{
+  height: var(--img-size-car-md);
+  object-position: center top;
+  object-position: 0% 42%;
+}
+.imgsecond{
+  height: var(--img-size-car-md);
+  object-fit: cover;
+  object-position: 0% 18%;
+}
+
+/* mapa */
+
+.map-size{
+  height: 450px;
+}
+
+/* cards */
+.card{
+  margin-top: 1em;
+}
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* carousel */
+
+.carousel-inner{
+  height: var(--img-size-car-lg);
+  -webkit-text-stroke: 0.5px rgb(124, 124, 124);
+color: transparent;
+}
+.carousel-caption{
+  background-color: rgba(39, 31, 31, 0.671);
+}
+img{
+  height: var(--img-size-car-lg);
+  object-fit: cover;
+  object-position: 0% 50%;
+  
+}
+.imgfirst{
+  height: var(--img-size-car-lg);
+  object-position: center top;
+  object-position: 0% 42%;
+}
+.imgsecond{
+  height: var(--img-size-car-lg);
+  object-fit: cover;
+  object-position: 0% 18%;
+}
+
+/* mapa */
+
+.map-size{
+  height: 500px;
+}
+
+/* cards */
+.card{
+  margin-top: 1em;
+}
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+   /* carousel */
+
+.carousel-inner{
+  height: var(--img-size-car-xl);
+  -webkit-text-stroke: 0.5px rgb(124, 124, 124);
+color: transparent;
+}
+.carousel-caption{
+  background-color: rgba(39, 31, 31, 0.671);
+}
+img{
+  height: var(--img-size-car-xl);
+  object-fit: cover;
+  object-position: 0% 50%;
+  
+}
+.imgfirst{
+  height: var(--img-size-car-xl);
+  object-position: center top;
+  object-position: 0% 42%;
+}
+.imgsecond{
+  height: var(--img-size-car-xl);
+  object-fit: cover;
+  object-position: 0% 18%;
+}
+
+/* mapa */
+
+.map-size{
+  height: 550px;
+}
+
+/* cards */
+.card{
+  margin-top: 1em;
+}
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+   /* carousel */
+
+.carousel-inner{
+  height: var(--img-size-car-xl);
+  -webkit-text-stroke: 0.5px rgb(124, 124, 124);
+color: transparent;
+}
+.carousel-caption{
+  background-color: rgba(39, 31, 31, 0.671);
+}
+img{
+  height: var(--img-size-car-xl);
+  object-fit: cover;
+  object-position: 0% 50%;
+  
+}
+.imgfirst{
+  height: var(--img-size-car-xl);
+  object-position: center top;
+  object-position: 0% 42%;
+}
+.imgsecond{
+  height: var(--img-size-car-xl);
+  object-fit: cover;
+  object-position: 0% 18%;
+}
+
+/* mapa */
+
+.map-size{
+  height: 550px;
+}
+
+/* cards */
+.card{
+  margin-top: 1em;
+}
+ }
